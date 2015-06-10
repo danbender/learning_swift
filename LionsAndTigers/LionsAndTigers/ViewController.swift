@@ -94,6 +94,9 @@ class ViewController: UIViewController {
         lioness.roar()
         
         self.lions += [lion, lioness]
+        
+        lion.changeToAlphaMale()
+        println(lion.isAlphaMale)
     }
     
 

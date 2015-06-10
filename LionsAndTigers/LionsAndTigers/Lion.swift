@@ -19,4 +19,8 @@ class Lion {
     func roar() {
         println("Lion: Roar roar")
     }
+    
+    func changeToAlphaMale () {
+        self.isAlphaMale = true
+    }
 }
