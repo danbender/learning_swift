@@ -90,6 +90,9 @@ class ViewController: UIViewController {
         lioness.name = "Sarabi"
         lioness.subspecies = "Barbary"
         
+        lion.roar()
+        lioness.roar()
+        
         self.lions += [lion, lioness]
     }
     
