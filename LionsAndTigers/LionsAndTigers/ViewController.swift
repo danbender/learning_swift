@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     
     var myTigers:[Tiger] = []
     var lions:[Lion] = []
+    var lionCubs:[LionCub] = []
     
     var currentIndex = 0
     var currentAnimal = (species: "Tiger", index: 0)
@@ -35,7 +36,6 @@ class ViewController: UIViewController {
         myTiger.image = UIImage(named: "BengalTiger.jpg")
         myTiger.chuff()
         myTiger.chuffANumberOftimes(5, isLoud: false)
-        
         println("My tiger's name is \(myTiger.name), its breed is \(myTiger.breed) and it is \(myTiger.age) years old. Its image is \(myTiger.image).")
         
         self.myTigers.append(myTiger)
@@ -89,15 +89,28 @@ class ViewController: UIViewController {
         lioness.roar()
         
         self.lions += [lion, lioness]
-        
+ 
+//        LionCub
         var lionCub = LionCub()
         lionCub.age = 1
         lionCub.name = "Simba"
         lionCub.image = UIImage(named: "LionCub1.jpg")
         lionCub.subspecies = "Masai"
-        
+        lionCub.isAlphaMale = true
         lionCub.roar()
         lionCub.rubLionCubsBelly()
+        
+
+//        Fmeale Lion Cub
+        var femaleLionCub = LionCub()
+        femaleLionCub.age = 1
+        femaleLionCub.name = "Nala"
+        femaleLionCub.image = UIImage(named: "LionCub2.jpeg")
+        femaleLionCub.subspecies = "Transvaal"
+        femaleLionCub.isAlphaMale = false
+        
+        self.lionCubs = [lionCub, femaleLionCub]
+        
     }
     
 
