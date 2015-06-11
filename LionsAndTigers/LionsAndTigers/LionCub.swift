@@ -15,6 +15,9 @@ class LionCub: Lion {
     }
     
     override func roar () {
+//        go to superclass and do whatever it tells you to do there
+//        and implement the stuff that i add here as well.
+        super.roar()
         println("LionCub: Growl Growl")
     }
 }
