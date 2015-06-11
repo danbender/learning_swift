@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		373A75581B26BAC700D87332 /* Lion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A75571B26BAC700D87332 /* Lion.swift */; };
+		376FB8D01B29488A00389A79 /* LionCub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376FB8CF1B29488A00389A79 /* LionCub.swift */; };
 		37F5615D1B138E09002B6148 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F5615C1B138E09002B6148 /* AppDelegate.swift */; };
 		37F5615F1B138E09002B6148 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F5615E1B138E09002B6148 /* ViewController.swift */; };
 		37F561621B138E09002B6148 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37F561601B138E09002B6148 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		373A75571B26BAC700D87332 /* Lion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lion.swift; sourceTree = "<group>"; };
+		376FB8CF1B29488A00389A79 /* LionCub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LionCub.swift; sourceTree = "<group>"; };
 		37F561571B138E09002B6148 /* LionsAndTigers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LionsAndTigers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37F5615B1B138E09002B6148 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37F5615C1B138E09002B6148 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				37F5615C1B138E09002B6148 /* AppDelegate.swift */,
 				373A75571B26BAC700D87332 /* Lion.swift */,
+				376FB8CF1B29488A00389A79 /* LionCub.swift */,
 				37F5615E1B138E09002B6148 /* ViewController.swift */,
 				37F5617C1B139278002B6148 /* Tiger.swift */,
 				37F561601B138E09002B6148 /* Main.storyboard */,
@@ -253,6 +256,7 @@
 				37F5615F1B138E09002B6148 /* ViewController.swift in Sources */,
 				37F5617D1B139278002B6148 /* Tiger.swift in Sources */,
 				37F5615D1B138E09002B6148 /* AppDelegate.swift in Sources */,
+				376FB8D01B29488A00389A79 /* LionCub.swift in Sources */,
 				373A75581B26BAC700D87332 /* Lion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
