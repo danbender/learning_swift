@@ -7,8 +7,14 @@
 //
 
 import Foundation
-
+import UIKit
 
 class LionCub: Lion {
+    func rubLionCubsBelly () {
+        println("LionCub: Snuggle and be happy")
+    }
     
+    override func roar () {
+        println("LionCub: Growl Growl")
+    }
 }
