@@ -75,19 +75,18 @@ class ViewController: UIViewController {
         lion.image = UIImage(named:"Lion.jpg")
         lion.name = "Mufasa"
         lion.subspecies = "West African"
+        lion.roar()
+        lion.changeToAlphaMale()
+        println(lion.isAlphaMale)
         
+//        Lioness
         var lioness = Lion()
         lioness.age = 3
         lioness.isAlphaMale = false
         lioness.image = UIImage(named: "Lioness.jpeg")
         lioness.name = "Sarabi"
         lioness.subspecies = "Barbary"
-        
-        lion.roar()
         lioness.roar()
-        
-        lion.changeToAlphaMale()
-        println(lion.isAlphaMale)
         
         self.lions += [lion, lioness]
         
