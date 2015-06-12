@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     var secondContainer: UIView!
     var thirdContainer: UIView!
     var fourthContainer: UIView!
+    
+    var titleLabel: UILabel!
 
 //    k means konstant
     let kMarginForView:CGFloat = 10.0
@@ -30,7 +32,6 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
     
     func setupContainerViews() {
         self.firstContainer = UIView(frame: CGRect(x: self.view.bounds.origin.x + kMarginForView, y: self.view.bounds.origin.y, width: self.view.bounds.width - (kMarginForView * 2), height: self.view.bounds.height * kSixth))
