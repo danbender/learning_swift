@@ -49,7 +49,11 @@ class ViewController: UIViewController {
         self.fourthContainer = UIView(frame: CGRect(x: self.view.bounds.origin.x + kMarginForView, y: firstContainer.frame.height + secondContainer.frame.height + thirdContainer.frame.height, width: self.view.bounds.width - (kMarginForView * 2), height: self.view.bounds.height * kSixth))
         self.fourthContainer.backgroundColor = UIColor.blackColor()
         self.view.addSubview(self.fourthContainer)
-        
+    }
+    
+    func setupFirstContainer (containerView: UIView) {
+        self.titleLabel = UILabel()
+        self.titleLabel.text = "Super Slots"
     }
 }
 
