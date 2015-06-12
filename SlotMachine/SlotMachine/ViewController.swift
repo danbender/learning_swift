@@ -26,6 +26,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.setupContainerViews()
+        self.setupFirstContainer(self.firstContainer)
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,6 +55,22 @@ class ViewController: UIViewController {
     func setupFirstContainer (containerView: UIView) {
         self.titleLabel = UILabel()
         self.titleLabel.text = "Super Slots"
+        self.titleLabel.textColor = UIColor.yellowColor()
+        self.titleLabel.font = UIFont(name: "MarkerFelt-Wide", size: 40.0)
+        self.titleLabel.sizeToFit()
+        self.titleLabel.center =  CGPointMake(containerView.frame.width/2, containerView.frame.height/2)
+        containerView.addSubview(self.titleLabel)
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
 
