@@ -15,6 +15,11 @@ class ViewController: UIViewController {
     var thirdContainer: UIView!
     var fourthContainer: UIView!
 
+//    k means konstant
+    let kMarginForView:CGFloat = 10.0
+    let kSixth:CGFloat = 1.0/6.0
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
