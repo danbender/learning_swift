@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     let kNumberOfContainers = 3
     let kNumberOfSlots = 3
     let kThird:CGFloat = 1.0/3.0
-//    let kMarginForSlot:CGFloat = 2.0
+    let kMarginForSlot:CGFloat = 2.0
     
     
     override func viewDidLoad() {
@@ -69,16 +69,14 @@ class ViewController: UIViewController {
     
     
     func setupSecondContainer(containerView: UIView) {
-        for var containerNumber=0; containerNumber < kNumberOfContainers; ++containerNumber {
-            
+        for var containerNumber = 0; containerNumber < kNumberOfContainers; ++containerNumber {
             for var slotNumber = 0; slotNumber < kNumberOfSlots; ++slotNumber {
                 
                 var slotImageView = UIImageView()
                 slotImageView.backgroundColor = UIColor.yellowColor()
-                slotImageView.frame = CGRect(x: containerView.bounds.origin.x + (Container), y: <#CGFloat#>, width: <#CGFloat#>, height: <#CGFloat#>)
-                
+                slotImageView.frame = CGRect(x: containerView.bounds.origin.x + (containerView.bounds.size.width * CGFloat(containerNumber) * kThird), y: containerView.bounds.origin.y + (containerView.bounds.size.height * CGFloat(slotNumber) * kThird), width: containerView.bounds.width * kThird - kMarginForSlot, height: containerView.bounds.height * kThird - kMarginForSlot)
+                containerView.addSubview(slotImageView)
             }
-            
         }
     }
     
