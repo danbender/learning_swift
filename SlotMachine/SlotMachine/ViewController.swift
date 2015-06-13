@@ -32,6 +32,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         self.setupContainerViews()
         self.setupFirstContainer(self.firstContainer)
+        self.setupSecondContainer(self.secondContainer)
     }
 
     override func didReceiveMemoryWarning() {
