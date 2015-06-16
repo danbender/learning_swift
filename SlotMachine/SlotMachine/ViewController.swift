@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     var secondContainer: UIView!
     var thirdContainer: UIView!
     var fourthContainer: UIView!
-    
+
     var titleLabel: UILabel!
     
 //    Information Labels
@@ -24,7 +24,6 @@ class ViewController: UIViewController {
     var creditsTitleLabel: UILabel!
     var betTitlelabel: UILabel!
     var winnerPaidTitleLabel: UILabel!
-    
 
 //    k means konstant
     let kMarginForView:CGFloat = 10.0
@@ -100,7 +99,6 @@ class ViewController: UIViewController {
         self.creditsLabel.textAlignment = NSTextAlignment.Center
         self.creditsLabel.backgroundColor = UIColor.darkGrayColor()
         containerView.addSubview(self.creditsLabel)
-        
     }
     
     
