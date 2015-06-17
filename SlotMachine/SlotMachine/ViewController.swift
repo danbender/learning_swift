@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     var betLabel: UILabel!
     var winnerPaidLabel: UILabel!
     var creditsTitleLabel: UILabel!
-    var betTitlelabel: UILabel!
+    var betTitleLabel: UILabel!
     var winnerPaidTitleLabel: UILabel!
 
 //    k means konstant
