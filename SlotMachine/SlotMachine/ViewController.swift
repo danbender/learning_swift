@@ -34,13 +34,13 @@ class ViewController: UIViewController {
     let kThird:CGFloat = 1.0/3.0
     let kMarginForSlot:CGFloat = 2.0
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.setupContainerViews()
         self.setupFirstContainer(self.firstContainer)
         self.setupSecondContainer(self.secondContainer)
+        self.setupThirdContainer(self.thirdContainer)
     }
 
     override func didReceiveMemoryWarning() {
@@ -75,7 +75,6 @@ class ViewController: UIViewController {
         self.titleLabel.center =  CGPointMake(containerView.frame.width/2, containerView.frame.height/2)
         containerView.addSubview(self.titleLabel)
     }
-    
     
     func setupSecondContainer(containerView: UIView) {
         for var containerNumber = 0; containerNumber < kNumberOfContainers; ++containerNumber {
@@ -120,10 +119,5 @@ class ViewController: UIViewController {
         self.winnerPaidLabel.backgroundColor = UIColor.darkGrayColor()
         containerView.addSubview(self.winnerPaidLabel)
     }
-    
-    
-    
-    
-    
 }
 
