@@ -92,7 +92,7 @@ class ViewController: UIViewController {
         self.creditsLabel = UILabel()
         self.creditsLabel.text = "000000"
         self.creditsLabel.textColor = UIColor.redColor()
-        self.creditsLabel.font = UIFont(name: "Menlo-Bold", size: 16)
+        self.creditsLabel.font = UIFont(name: "Helvetica", size: 16)
         self.creditsLabel.sizeToFit()
         self.creditsLabel.center = CGPoint(x: containerView.frame.width * kSixth, y: containerView.frame.height * kThird)
         self.creditsLabel.textAlignment = NSTextAlignment.Center
@@ -102,7 +102,7 @@ class ViewController: UIViewController {
         self.betLabel = UILabel()
         self.betLabel.text = "0000"
         self.betLabel.textColor = UIColor.redColor()
-        self.betLabel.font = UIFont(name: "Menlo-Bold", size: 16)
+        self.betLabel.font = UIFont(name: "Helvetica", size: 16)
         self.betLabel.sizeToFit()
         self.betLabel.center = CGPoint(x: containerView.frame.width * kSixth * 3, y: containerView.frame.height * kThird)
         self.betLabel.textAlignment = NSTextAlignment.Center
@@ -112,7 +112,7 @@ class ViewController: UIViewController {
         self.winnerPaidLabel = UILabel()
         self.winnerPaidLabel.text = "000000"
         self.winnerPaidLabel.textColor = UIColor.redColor()
-        self.winnerPaidLabel.font = UIFont(name: "Menlo-Bold", size: 16)
+        self.winnerPaidLabel.font = UIFont(name: "Helvetica", size: 16)
         self.winnerPaidLabel.sizeToFit()
         self.winnerPaidLabel.center = CGPoint(x: containerView.frame.width * kSixth * 5, y: containerView.frame.height * kThird)
         self.winnerPaidLabel.textAlignment = NSTextAlignment.Center
