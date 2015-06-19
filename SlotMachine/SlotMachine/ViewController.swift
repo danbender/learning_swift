@@ -153,7 +153,11 @@ class ViewController: UIViewController {
         self.winnerPaidTitleLabel.sizeToFit()
         self.winnerPaidTitleLabel.center = CGPoint(x: containerView.frame.width * 5 * kSixth, y: containerView.frame.height * 2 * kThird)
         containerView.addSubview(self.winnerPaidTitleLabel)
-        
+    }
+    
+    func setupFourthContainer (containerView: UIView) {
+        self.resetButton = UIButton()
+        self.resetButton.setTitle("Reset", forState:UIControlState.Normal)
     }
     
 }
