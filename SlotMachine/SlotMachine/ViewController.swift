@@ -24,15 +24,26 @@ class ViewController: UIViewController {
     var creditsTitleLabel: UILabel!
     var betTitleLabel: UILabel!
     var winnerPaidTitleLabel: UILabel!
+    
+//    Buttons in 4th container
+    var resetButton = UIButton!
+    var betOneButton = UIButton!
+    var betMaxButton = UIButton!
+    var spinButton = UIButton!
 
 //    k means konstant
     let kMarginForView:CGFloat = 10.0
     let kSixth:CGFloat = 1.0/6.0
     
-    let kNumberOfContainers = 3
-    let kNumberOfSlots = 3
+    let kHalf:CGFloat
+    let kEighth:CGFloat
+    
     let kThird:CGFloat = 1.0/3.0
     let kMarginForSlot:CGFloat = 2.0
+    
+    let kNumberOfContainers = 3
+    let kNumberOfSlots = 3
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
