@@ -157,7 +157,10 @@ class ViewController: UIViewController {
     
     func setupFourthContainer (containerView: UIView) {
         self.resetButton = UIButton()
-        self.resetButton.setTitle("Reset", forState:UIControlState.Normal)
+        self.resetButton.setTitle("Reset", forState: UIControlState.Normal)
+        self.resetButton.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
+        self.resetButton.titleLabel?.font = UIFont(name: "Superclarendon-Bold", size: 12)
+        
     }
     
 }
