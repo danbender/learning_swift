@@ -35,8 +35,8 @@ class ViewController: UIViewController {
     let kMarginForView:CGFloat = 10.0
     let kSixth:CGFloat = 1.0/6.0
     
-    let kHalf:CGFloat
-    let kEighth:CGFloat
+    let kHalf:CGFloat = 1.0/2.0
+    let kEighth:CGFloat = 1.0/8.0
     
     let kThird:CGFloat = 1.0/3.0
     let kMarginForSlot:CGFloat = 2.0
