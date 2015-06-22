@@ -64,6 +64,10 @@ class ViewController: UIViewController {
         println("resetButtonPressed")
     }
     
+    func betOneButtonPressed(button:UIButton) {
+        println("betOneButtonPressed")
+    }
+    
     func setupContainerViews() {
         self.firstContainer = UIView(frame: CGRect(x: self.view.bounds.origin.x + kMarginForView, y: self.view.bounds.origin.y, width: self.view.bounds.width - (kMarginForView * 2), height: self.view.bounds.height * kSixth))
         self.firstContainer.backgroundColor = UIColor.redColor()
@@ -174,10 +178,12 @@ class ViewController: UIViewController {
         self.betOneButton = UIButton()
         self.betOneButton.setTitle("Bet One", forState: UIControlState.Normal)
         self.betOneButton.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
+        self.betOneButton.titleLabel?.font = UIFont(name: "Superclarendon-Bold", size: 12)
         self.betOneButton.backgroundColor = UIColor.greenColor()
         self.betOneButton.sizeToFit()
         self.betOneButton.center = CGPoint(x: containerView.frame.width * 3 * kEighth, y: containerView.frame.height * kHalf)
-        self.betOneButton.addTarget(self, action: "betOneButtonPressed", forControlEvents: UIControlEvents.TouchUpInside)
+        self.betOneButton.addTarget(self, action: "betOneButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+        containerView.addSubview(self.betOneButton)
         
     }
 }
