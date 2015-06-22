@@ -52,6 +52,7 @@ class ViewController: UIViewController {
         self.setupFirstContainer(self.firstContainer)
         self.setupSecondContainer(self.secondContainer)
         self.setupThirdContainer(self.thirdContainer)
+        self.setupFourthContainer(self.fourthContainer)
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,7 +61,9 @@ class ViewController: UIViewController {
     }
     
 //    IBActions
-    func resetButtonPressed(button:
+    func resetButtonPressed(button:UIButton) {
+        println("resetButtonPressed")
+    }
     
     func setupContainerViews() {
         self.firstContainer = UIView(frame: CGRect(x: self.view.bounds.origin.x + kMarginForView, y: self.view.bounds.origin.y, width: self.view.bounds.width - (kMarginForView * 2), height: self.view.bounds.height * kSixth))
@@ -169,6 +172,5 @@ class ViewController: UIViewController {
         self.resetButton.addTarget(self, action: "resetButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
         containerView.addSubview(self.resetButton)
     }
-    
 }
 
