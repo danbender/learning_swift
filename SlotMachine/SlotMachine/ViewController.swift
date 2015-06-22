@@ -59,6 +59,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+//    IBActions
+    func resetButtonPressed(button:
+    
     func setupContainerViews() {
         self.firstContainer = UIView(frame: CGRect(x: self.view.bounds.origin.x + kMarginForView, y: self.view.bounds.origin.y, width: self.view.bounds.width - (kMarginForView * 2), height: self.view.bounds.height * kSixth))
         self.firstContainer.backgroundColor = UIColor.redColor()
@@ -160,7 +163,11 @@ class ViewController: UIViewController {
         self.resetButton.setTitle("Reset", forState: UIControlState.Normal)
         self.resetButton.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
         self.resetButton.titleLabel?.font = UIFont(name: "Superclarendon-Bold", size: 12)
-        
+        self.resetButton.backgroundColor = UIColor.lightGrayColor()
+        self.resetButton.sizeToFit()
+        self.resetButton.center = CGPoint(x: containerView.frame.width * kEighth, y: containerView.frame.height * kHalf)
+        self.resetButton.addTarget(self, action: "resetButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+        containerView.addSubview(self.resetButton)
     }
     
 }
