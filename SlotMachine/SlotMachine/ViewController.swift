@@ -15,9 +15,8 @@ class ViewController: UIViewController {
     var thirdContainer: UIView!
     var fourthContainer: UIView!
 
-    var titleLabel: UILabel!
-    
 //    Information Labels
+    var titleLabel: UILabel!
     var creditsLabel: UILabel!
     var betLabel: UILabel!
     var winnerPaidLabel: UILabel!
