@@ -26,10 +26,10 @@ class ViewController: UIViewController {
     var winnerPaidTitleLabel: UILabel!
     
 //    Buttons in 4th container
-    var resetButton = UIButton!
-    var betOneButton = UIButton!
-    var betMaxButton = UIButton!
-    var spinButton = UIButton!
+    var resetButton: UIButton!
+    var betOneButton: UIButton!
+    var betMaxButton: UIButton!
+    var spinButton: UIButton!
 
 //    k means konstant
     let kMarginForView:CGFloat = 10.0
