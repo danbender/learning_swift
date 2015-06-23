@@ -68,6 +68,10 @@ class ViewController: UIViewController {
         println("betOneButtonPressed")
     }
     
+    func betMaxButtonPressed(button:UIButton) {
+        println("betMaxButtonPressed")
+    }
+    
     func setupContainerViews() {
         self.firstContainer = UIView(frame: CGRect(x: self.view.bounds.origin.x + kMarginForView, y: self.view.bounds.origin.y, width: self.view.bounds.width - (kMarginForView * 2), height: self.view.bounds.height * kSixth))
         self.firstContainer.backgroundColor = UIColor.redColor()
