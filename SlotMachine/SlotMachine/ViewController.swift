@@ -76,7 +76,7 @@ class ViewController: UIViewController {
     }
     
     func spinButtonPressed(button:UIButton) {
-        println("spinButtonPressed")
+        self.removeSlotImageViews()
         slots = Factory.createSlots()
         setupSecondContainer(self.secondContainer)
     }
@@ -227,6 +227,16 @@ class ViewController: UIViewController {
         self.spinButton.center = CGPoint(x: containerView.frame.width * 7 * kEighth, y: containerView.frame.height * kHalf)
         self.spinButton.addTarget(self, action: "spinButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
         containerView.addSubview(self.spinButton)
+    }
+    
+    func removeSlotImageViews () {
+        if self.secondContainer != nil {
+            let container: UIView? = self.secondContainer
+            let subViews:Array? = container!.subviews
+            for view in subViews! {
+                view.removeFromSuperview()
+            }
+        }
     }
 }
 
