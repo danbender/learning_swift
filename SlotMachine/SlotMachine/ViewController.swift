@@ -29,6 +29,9 @@ class ViewController: UIViewController {
     var betOneButton: UIButton!
     var betMaxButton: UIButton!
     var spinButton: UIButton!
+    
+//    Slots Array
+    var slots:[[Slot]] = []
 
 //    k means konstant
     let kMarginForView:CGFloat = 10.0
@@ -74,6 +77,8 @@ class ViewController: UIViewController {
     
     func spinButtonPressed(button:UIButton) {
         println("spinButtonPressed")
+        slots = Factory.createSlots()
+        setupSecondContainer(self.secondContainer)
     }
     
     func setupContainerViews() {
