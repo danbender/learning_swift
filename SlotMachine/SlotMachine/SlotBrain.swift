@@ -136,18 +136,6 @@ class SlotBrain {
             return false
         }
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }
 
 
