@@ -249,6 +249,10 @@ class ViewController: UIViewController {
 //        keep Capa reserves the items' slots in memory
         slots.removeAll(keepCapacity: true)
         self.setupSecondContainer(self.secondContainer)
+        
+        self.credits = 50
+        self.winnings = 0
+        self.currentBet = 0
     }
 }
 
