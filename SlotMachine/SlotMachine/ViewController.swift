@@ -99,6 +99,8 @@ class ViewController: UIViewController {
                 credits -= creditsToBetMax
                 currentBet += creditsToBetMax
                 updateMainView()
+            } else {
+                showAlertWithText(message: "You can only bet 5 credits at a time!")
             }
         }
         
