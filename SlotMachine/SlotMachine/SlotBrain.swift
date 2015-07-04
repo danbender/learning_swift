@@ -41,4 +41,20 @@ class SlotBrain {
         return slotsInRows
     }
     
+    class func computeWinnings (slots: [[Slot]]) -> Int {
+        
+        var slotsInRows = unpackSlotsIntoSlotRows(slots)
+        var winnings = 0
+        
+        var flushWinCount = 0
+        var threeOfAKindWinCount = 0
+        var straightWinCount = 0
+        
+        for slotRow in slotsInRows {
+            
+        }
+        
+        return winnings
+    }
+    
 }
