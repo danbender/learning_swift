@@ -32,6 +32,11 @@ class ViewController: UIViewController {
     
 //    Slots Array
     var slots:[[Slot]] = []
+    
+//    Stats
+    var credits = 0
+    var currentBet = 0
+    var winnings = 0
 
 //    k means konstant
     let kMarginForView:CGFloat = 10.0
@@ -243,6 +248,7 @@ class ViewController: UIViewController {
         removeSlotImageViews()
 //        keep Capa reserves the items' slots in memory
         slots.removeAll(keepCapacity: true)
+        self.setupSecondContainer(self.secondContainer)
     }
 }
 
