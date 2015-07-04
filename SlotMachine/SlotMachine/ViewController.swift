@@ -57,9 +57,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         self.setupContainerViews()
         self.setupFirstContainer(self.firstContainer)
-        self.setupSecondContainer(self.secondContainer)
         self.setupThirdContainer(self.thirdContainer)
         self.setupFourthContainer(self.fourthContainer)
+        
+        hardReset()
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,7 +70,7 @@ class ViewController: UIViewController {
     
 //    IBActions
     func resetButtonPressed(button:UIButton) {
-        println("resetButtonPressed")
+        hardReset()
     }
     
     func betOneButtonPressed(button:UIButton) {
