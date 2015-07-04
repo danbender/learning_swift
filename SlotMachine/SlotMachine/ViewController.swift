@@ -254,6 +254,14 @@ class ViewController: UIViewController {
         self.credits = 50
         self.winnings = 0
         self.currentBet = 0
+        
+        self.updateMainView()
+    }
+    
+    func updateMainView () {
+        self.creditsLabel.text = "\(credits)"
+        self.betLabel.text = "\(currentBet)"
+        self.winnerPaidLabel.text = "\(winnings)"
     }
 }
 
