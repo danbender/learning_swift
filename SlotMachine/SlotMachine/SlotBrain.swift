@@ -62,6 +62,13 @@ class SlotBrain {
                 winnings += 1
                 straightWinCount += 1
             }
+            
+            if checkThreeOfAKind(slotRow) == true {
+                println("Three of a kind!")
+                winnings += 3
+                threeOfAKindWinCount += 1
+                
+            }
         }
         
         if flushWinCount == 3 {
@@ -72,6 +79,11 @@ class SlotBrain {
         if straightWinCount == 3 {
             println("Epic streak!")
             winnings += 1000
+        }
+        
+        if threeOfAKindWinCount == 3 {
+            println("Threes all around")
+            winnings += 50
         }
         
         
@@ -112,7 +124,18 @@ class SlotBrain {
     }
     
     
-    
+    class func checkThreeOfAKind (slotRow: [Slot]) -> Book {
+        let slot1 = slotRow[0]
+        let slot2 = slotRow[1]
+        let slot3 = slotRow[2]
+        
+        if slot1.value == slot2.value && slot1.value == slot3.value {
+            return true
+        }
+        else {
+            return false
+        }
+    }
     
     
     
