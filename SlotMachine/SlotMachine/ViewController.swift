@@ -238,5 +238,11 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    func hardReset () {
+        removeSlotImageViews()
+//        keep Capa reserves the items' slots in memory
+        slots.removeAll(keepCapacity: true)
+    }
 }
 
