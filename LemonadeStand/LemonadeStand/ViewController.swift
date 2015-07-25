@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     let price = Price()
     
     var lemonsToPurchase = 0
-    var iceCubesToPurches = 0
+    var iceCubesToPurchase = 0
     
     var lemonsToMix = 0
     var iceCubesToMix = 0
@@ -73,6 +73,25 @@ class ViewController: UIViewController {
     
     @IBAction func startDayButtonPressed(sender: UIButton) {
     }
+    
+//  Helper Functions
+    
+    func updateMainView () {
+        moneySupplyCount.text = "$\(supplies.money)"
+        lemonSupplyCount.text = "\(supplies.lemons) Lemons"
+        iceCubeSupplyCount.text = "\(supplies.iceCubes) Ice Cubes"
+        
+        lemonPurchaseCount.text = "\(lemonsToPurchase)"
+        iceCubePurchaseCount.text = "\(iceCubesToPurchase)"
+        
+        lemonMixCount.text = "\(lemonsToMix)"
+        iceCubeMixCount.text = "\(iceCubesToMix)"
+    }
+    
+    
+    
+    
+    
     
     
     
