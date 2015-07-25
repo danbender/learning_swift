@@ -16,6 +16,8 @@ struct Supplies {
 //    custom Initializers
     init (aMoney : Int, aLemons : Int, aIceCubes: Int) {
         money = aMoney
+        lemons = aLemons
+        iceCubes = aIceCubes
         
     }
     
