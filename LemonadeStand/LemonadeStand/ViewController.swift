@@ -19,6 +19,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var lemonMixCount: UILabel!
     @IBOutlet weak var iceCubeMixCount: UILabel!
     
+    var supplies = Supplies(aMoney: 10, aLemons: 1, aIceCubes: 1)
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
