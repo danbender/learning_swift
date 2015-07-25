@@ -14,6 +14,7 @@
 		37D1BAEC1B5ED1D0003B03C5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37D1BAEA1B5ED1D0003B03C5 /* LaunchScreen.xib */; };
 		37D1BAF81B5ED1D0003B03C5 /* LemonadeStandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1BAF71B5ED1D0003B03C5 /* LemonadeStandTests.swift */; };
 		37D1BB021B5EE4D6003B03C5 /* Supplies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1BB011B5EE4D6003B03C5 /* Supplies.swift */; };
+		37D1BB041B6362F1003B03C5 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1BB031B6362F1003B03C5 /* Price.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		37D1BAF61B5ED1D0003B03C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37D1BAF71B5ED1D0003B03C5 /* LemonadeStandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LemonadeStandTests.swift; sourceTree = "<group>"; };
 		37D1BB011B5EE4D6003B03C5 /* Supplies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Supplies.swift; sourceTree = "<group>"; };
+		37D1BB031B6362F1003B03C5 /* Price.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				37D1BAE11B5ED1D0003B03C5 /* AppDelegate.swift */,
 				37D1BAE31B5ED1D0003B03C5 /* ViewController.swift */,
 				37D1BB011B5EE4D6003B03C5 /* Supplies.swift */,
+				37D1BB031B6362F1003B03C5 /* Price.swift */,
 				37D1BAE51B5ED1D0003B03C5 /* Main.storyboard */,
 				37D1BAE81B5ED1D0003B03C5 /* Images.xcassets */,
 				37D1BAEA1B5ED1D0003B03C5 /* LaunchScreen.xib */,
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37D1BAE41B5ED1D0003B03C5 /* ViewController.swift in Sources */,
+				37D1BB041B6362F1003B03C5 /* Price.swift in Sources */,
 				37D1BB021B5EE4D6003B03C5 /* Supplies.swift in Sources */,
 				37D1BAE21B5ED1D0003B03C5 /* AppDelegate.swift in Sources */,
 			);
@@ -415,6 +419,7 @@
 				37D1BAFD1B5ED1D0003B03C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		37D1BAFE1B5ED1D0003B03C5 /* Build configuration list for PBXNativeTarget "LemonadeStandTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +428,7 @@
 				37D1BB001B5ED1D0003B03C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
