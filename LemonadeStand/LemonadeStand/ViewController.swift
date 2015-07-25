@@ -22,6 +22,12 @@ class ViewController: UIViewController {
     var supplies = Supplies(aMoney: 10, aLemons: 1, aIceCubes: 1)
     let price = Price()
     
+    var lemonsToPurchase = 0
+    var iceCubesToPurches = 0
+    
+    var lemonsToMix = 0
+    var iceCubesToMix = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
