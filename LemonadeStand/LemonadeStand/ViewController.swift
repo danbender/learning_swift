@@ -64,7 +64,7 @@ class ViewController: UIViewController {
             updateMainView()
         }
         else {
-            showAlertWithText(message: "You don't have enough money")
+            showAlertWithText(header: "Error", message: "You don't have enough money")
         }
     }
     
