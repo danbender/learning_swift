@@ -32,6 +32,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        updateMainView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -88,7 +89,7 @@ class ViewController: UIViewController {
         iceCubeMixCount.text = "\(iceCubesToMix)"
     }
     
-    func showAlertWithText (header : String = "Warning", message : Sring) {
+    func showAlertWithText (header : String = "Warning", message : String) {
     
         var alert = UIAlertController(title: header, message: message, preferredStyle: UIAlertControllerStyle.Alert)
         
