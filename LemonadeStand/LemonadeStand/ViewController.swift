@@ -45,6 +45,10 @@ class ViewController: UIViewController {
     
 //    +
     @IBAction func purchaseLemonButtonPressed(sender: UIButton) {
+        if supplies.money >= price.lemon {
+            lemonsToPurchase += 1
+            supplies.money -= price.lemon
+        }
     }
     
     @IBAction func purchaseIceCubeButtonPressed(sender: UIButton) {
