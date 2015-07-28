@@ -63,6 +63,9 @@ class ViewController: UIViewController {
             supplies.iceCubes += 1
             updateMainView()
         }
+        else {
+            showAlertWithText(message: "You don't have enough money")
+        }
     }
     
 //    -
