@@ -120,9 +120,27 @@ class ViewController: UIViewController {
     
 //    -
     @IBAction func unmixLemonButtonPressed(sender: UIButton) {
+        if lemonsToMix > 0 {
+            lemonsToPurchase = 0
+            lemonsToMix -= 1
+            supplies.lemons += 1
+            updateMainView()
+        }
+        else {
+            showAlertWithText(message: "You have nothing to un-mix")
+        }
     }
     
     @IBAction func unmixIceCubeButtonPressed(sender: UIButton) {
+        if iceCubesToMix > 0 {
+            iceCubesToPurchase = 0
+            iceCubesToMix -= 1
+            supplies.iceCubes += 1
+            updateMainView()
+        }
+        else {
+            showAlertWithText(message: "You have nothing to un-mix")
+        }
     }
     
     
