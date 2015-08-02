@@ -149,7 +149,9 @@ class ViewController: UIViewController {
     
     
     @IBAction func startDayButtonPressed(sender: UIButton) {
-        let customers = Int(arc4random_uniform(UInt32(11)))
+        
+        let average = findAverage(weatherToday)
+        let customers = Int(arc4random_uniform(UInt32(abs(average))))
         println("customers: \(customers)")
         
         if lemonsToMix == 0 || iceCubesToMix == 0 {
@@ -224,7 +226,7 @@ class ViewController: UIViewController {
         }
         
         var average:Double = Double(sum) / Double(data.count)
-        var rounded:Int = Int(ceil(average)
+        var rounded:Int = Int(ceil(average))
         
         return rounded
     }
