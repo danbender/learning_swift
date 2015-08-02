@@ -97,7 +97,7 @@ class ViewController: UIViewController {
     @IBAction func mixLemonButtonPressed(sender: UIButton) {
         if supplies.lemons > 0 {
             lemonsToPurchase = 0
-            supplies.lemons =- 1
+            supplies.lemons -= 1
             lemonsToMix += 1
             updateMainView()
         }
