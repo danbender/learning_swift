@@ -85,11 +85,17 @@ class ViewController: UIViewController {
         if iceCubesToPurchase > 0 {
             iceCubesToPurchase -= 1
             supplies.money -= price.iceCube
+            supplies.iceCubes -= 1
+            updateMainView()
+        }
+        else {
+            showAlertWithText(message: "You don't have anything to return")
         }
     }
     
 //    +
     @IBAction func mixLemonButtonPressed(sender: UIButton) {
+        
     }
     
     @IBAction func mixIceCubeButtonPressed(sender: UIButton) {
