@@ -28,11 +28,15 @@ class ViewController: UIViewController {
     var lemonsToMix = 0
     var iceCubesToMix = 0
     
+    var weatherArray:[[Int]] = [[-10, -9, -5, -7], [5, 8, 10, 9], [22, 25, 27, 23]]
+    var weatherToday:[Int] = [0, 0, 0, 0]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         updateMainView()
+        simulateWeatherToday()
     }
 
     override func didReceiveMemoryWarning() {
@@ -177,7 +181,8 @@ class ViewController: UIViewController {
             iceCubesToPurchase = 0
             lemonsToMix = 0
             iceCubesToMix = 0
-    
+            
+            simulateWeatherToday()
             updateMainView()
         }
     }
@@ -206,10 +211,23 @@ class ViewController: UIViewController {
     }
     
     
+    func simulateWeatherToday () {
+        let index = Int(arc4random_uniform(UInt32(weatherArray.count)))
+        weatherToday = weatherArray[index]
+    }
     
     
-    
-    
+    func findAverage (data:[Int]) -> Int {
+        var sum = 0
+        for x in data {
+            sum += x
+        }
+        
+        var average:Double = Double(sum) / Double(data.count)
+        var rounded:Int = Int(ceil(average)
+        
+        return rounded
+    }
     
     
     
