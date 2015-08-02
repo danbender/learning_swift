@@ -209,11 +209,8 @@ class ViewController: UIViewController {
     }
     
     func showAlertWithText (header : String = "Warning", message : String) {
-    
         var alert = UIAlertController(title: header, message: message, preferredStyle: UIAlertControllerStyle.Alert)
-        
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-        
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
@@ -221,6 +218,13 @@ class ViewController: UIViewController {
     func simulateWeatherToday () {
         let index = Int(arc4random_uniform(UInt32(weatherArray.count)))
         weatherToday = weatherArray[index]
+        
+        switch index {
+            case 0: weatherImageView.image = UIImage(named: "cold")
+            case 1: weatherImageView.image = UIImage(named: "mild")
+            case 2: weatherImageView.image = UIImage(named: "warm")
+            default: weatherImageView.image = UIImage(named: "warm")
+        }
     }
     
     
