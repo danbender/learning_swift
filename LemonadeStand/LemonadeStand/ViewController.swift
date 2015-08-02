@@ -107,6 +107,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func mixIceCubeButtonPressed(sender: UIButton) {
+        if supplies.iceCubes > 0 {
+            iceCubesToPurchase = 0
+            supplies.iceCubes -= 1
+            iceCubesToMix += 1
+            updateMainView()
+        }
+        else {
+            showAlertWithText(message: "You don't have enough inventory")
+        }
     }
     
 //    -
