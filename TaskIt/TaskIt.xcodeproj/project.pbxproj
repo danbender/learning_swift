@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		372253CA1B715F02003ED063 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372253C91B715F02003ED063 /* TaskCell.swift */; };
 		3771D19D1B6FDDF700C8C80F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3771D19C1B6FDDF700C8C80F /* AppDelegate.swift */; };
 		3771D19F1B6FDDF700C8C80F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3771D19E1B6FDDF700C8C80F /* ViewController.swift */; };
 		3771D1A21B6FDDF700C8C80F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3771D1A01B6FDDF700C8C80F /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		372253C91B715F02003ED063 /* TaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		3771D1991B6FDDF700C8C80F /* TaskIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3771D19C1B6FDDF700C8C80F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3771D19E1B6FDDF700C8C80F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				3771D19C1B6FDDF700C8C80F /* AppDelegate.swift */,
 				3771D19E1B6FDDF700C8C80F /* ViewController.swift */,
 				3771D1A01B6FDDF700C8C80F /* Main.storyboard */,
+				372253C91B715F02003ED063 /* TaskCell.swift */,
 				3771D1A61B6FDDF700C8C80F /* Assets.xcassets */,
 				3771D1A81B6FDDF700C8C80F /* LaunchScreen.storyboard */,
 				3771D1AB1B6FDDF700C8C80F /* Info.plist */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				372253CA1B715F02003ED063 /* TaskCell.swift in Sources */,
 				3771D19F1B6FDDF700C8C80F /* ViewController.swift in Sources */,
 				3771D1A51B6FDDF700C8C80F /* TaskIt.xcdatamodeld in Sources */,
 				3771D19D1B6FDDF700C8C80F /* AppDelegate.swift in Sources */,
@@ -289,6 +293,7 @@
 				3771D1B01B6FDDF700C8C80F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
