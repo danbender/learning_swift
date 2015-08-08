@@ -2,20 +2,17 @@
 //  ViewController.swift
 //  TaskIt
 //
-//  Created by Dan Bender on 03/08/15.
-//  Copyright © 2015 Dan Bender. All rights reserved.
+//  Created by Dan Bender on 08/08/15.
+//  Copyright (c) 2015 Dan Bender. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,22 +20,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Dispose of any resources that can be recreated.
     }
 
-//    UITableViewDataSource
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        print(indexPath.row)
-       
-        var myCell: TaskCell = tableView.dequeueReusableCellWithIdentifier("myCell") as! TaskCell
-        return myCell
-    }
-    
-//    UITableViewDelegate
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        
-    }
 
 }
 
