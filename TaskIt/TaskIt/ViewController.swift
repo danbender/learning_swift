@@ -4,7 +4,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     @IBOutlet weak var tableView: UITableView!
     
-    var taskArray:[Dictionary<String, String>] = []
+    var taskArray:[TaskModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
