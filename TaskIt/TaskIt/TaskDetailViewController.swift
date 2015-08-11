@@ -1,9 +1,13 @@
 import UIKit
 
 class TaskDetailViewController: UIViewController {
+    
+    var detailTaskModel: TaskModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        println(self.detailTaskModel.task)
 
     }
 
