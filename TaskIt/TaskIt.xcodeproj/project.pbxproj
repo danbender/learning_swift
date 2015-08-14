@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37401B641B7DB486009FBD7F /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37401B631B7DB486009FBD7F /* Date.swift */; };
 		3758E4A51B79377A00CD7D90 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3758E4A41B79377A00CD7D90 /* TaskDetailViewController.swift */; };
 		37BB9BE11B76776E00899248 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BB9BE01B76776E00899248 /* AppDelegate.swift */; };
 		37BB9BE31B76776E00899248 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BB9BE21B76776E00899248 /* ViewController.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		37401B631B7DB486009FBD7F /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		3758E4A41B79377A00CD7D90 /* TaskDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
 		37BB9BDB1B76776E00899248 /* TaskIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37BB9BDF1B76776E00899248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				37BB9BE21B76776E00899248 /* ViewController.swift */,
 				3758E4A41B79377A00CD7D90 /* TaskDetailViewController.swift */,
 				37BB9C021B76A82500899248 /* TaskModel.swift */,
+				37401B631B7DB486009FBD7F /* Date.swift */,
 				37BB9C001B768AA700899248 /* TaskCell.swift */,
 				37BB9BE41B76776E00899248 /* Main.storyboard */,
 				37BB9BE71B76776E00899248 /* Images.xcassets */,
@@ -222,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37BB9BE31B76776E00899248 /* ViewController.swift in Sources */,
+				37401B641B7DB486009FBD7F /* Date.swift in Sources */,
 				37BB9C011B768AA700899248 /* TaskCell.swift in Sources */,
 				37BB9C031B76A82500899248 /* TaskModel.swift in Sources */,
 				37BB9BE11B76776E00899248 /* AppDelegate.swift in Sources */,
