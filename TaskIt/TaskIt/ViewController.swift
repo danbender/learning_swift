@@ -4,7 +4,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     @IBOutlet weak var tableView: UITableView!
     
-    var baseArrat:[[TaskModel]] = []
+    var baseArray:[[TaskModel]] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +18,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
 // alterantively create instances directly in array:
         let taskArray = [task1, task2, TaskModel(task: "Gym", subTask: "Leg day", date: date3, completed: false)]
+        
+        var completedArray = [TaskModel:(task: "Code", subtask: "Task Project", date: date2, completed: true)]
+        
+        var baseArray = [taskArray, completedArray]
+        
         
         self.tableView.reloadData()
     }
