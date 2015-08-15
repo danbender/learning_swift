@@ -12,4 +12,6 @@ class AddTaskViewController: UIViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    @IBAction func addTaskButtonTapped(sender: UIButton) {
+    }
 }
