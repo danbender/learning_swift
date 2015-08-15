@@ -27,7 +27,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.tableView.reloadData()
         
         func sortByDate (taskOne:TaskModel, taskTwo:TaskModel) -> Bool {
-            return taskOne.date.timeIntervalSince1970 < taskTwo.date.timeIntervalSince1970
+            return taskOne.date.timeIntervalSince1970 > taskTwo.date.timeIntervalSince1970
         }
         
         taskArray = taskArray.sorted(sortByDate)
