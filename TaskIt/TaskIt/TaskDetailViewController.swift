@@ -4,6 +4,8 @@ class TaskDetailViewController: UIViewController {
     
     var detailTaskModel: TaskModel!
     
+    var mainVC: ViewController!
+    
     @IBOutlet weak var taskTextField: UITextField!
     @IBOutlet weak var subTaskTextField: UITextField!
     @IBOutlet weak var dueDatePicker: UIDatePicker!
