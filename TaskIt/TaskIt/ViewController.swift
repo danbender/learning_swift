@@ -16,12 +16,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let task1 = TaskModel(task : "Study French", subTask: "Verbs", date: date1, completed: false)
         let task2 = TaskModel(task: "Eat Dinner", subTask: "Burgers", date: date2, completed: false)
         
-// alterantively create instances directly in array:
+        // alternatively create instances directly in array:
         let taskArray = [task1, task2, TaskModel(task: "Gym", subTask: "Leg day", date: date3, completed: false)]
-        
-        var completedArray = [TaskModel:(task: "Code", subtask: "Task Project", date: date2, completed: true)]
-        
-        var baseArray = [taskArray, completedArray]
+        var completedArray = [TaskModel(task:"Code", subTask:"Task Project", date:date2, completed:true)]
+        baseArray = [taskArray, completedArray]
         
         
         self.tableView.reloadData()
@@ -31,10 +29,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidAppear(animated)
         self.tableView.reloadData()
         
-        taskArray = taskArray.sorted{
-            (taskOne:TaskModel, taskTwo:TaskModel) -> Bool in
-//            comparison logic here
-            return taskOne.date.timeIntervalSince1970 > taskTwo.date.timeIntervalSince1970
+        baseArray[0] = baseArray[0].sorted{
+            (taskOne:TaskModel, taskTwo: TaskModel) -> Bool in
+            //comparison logic here
+            return taskOne.date.timeIntervalSince1970 < taskTwo.date.timeIntervalSince1970
         }
 
     }
@@ -48,7 +46,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if segue.identifier == "showTaskDetail" {
             let detailVC: TaskDetailViewController = segue.destinationViewController as! TaskDetailViewController
             let indexPath = self.tableView.indexPathForSelectedRow()
-            let thisTask = taskArray[indexPath!.row]
+            let thisTask = baseArray[indexPath!.section][indexPath!.row]
             detailVC.detailTaskModel = thisTask
             detailVC.mainVC = self
         }
@@ -64,14 +62,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
 //    UITableViewDataSource
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        
+        return baseArray.count
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
-        return taskArray.count
+        return baseArray[section].count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let thisTask = taskArray[indexPath.row]
+        let thisTask = baseArray[indexPath.section][indexPath.row]
         
         var cell: TaskCell = tableView.dequeueReusableCellWithIdentifier("myCell") as! TaskCell
         
