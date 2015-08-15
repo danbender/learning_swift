@@ -157,7 +157,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="cfV-nq-DBq">
-                                <rect key="frame" x="0.0" y="251" width="320" height="162"/>
+                                <rect key="frame" x="0.0" y="252" width="320" height="162"/>
                                 <date key="date" timeIntervalSinceReferenceDate="461342767.789083">
                                     <!--2015-08-15 14:46:07 +0000-->
                                 </date>
@@ -192,6 +192,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="dueDatePicker" destination="cfV-nq-DBq" id="oSh-c2-SGf"/>
+                        <outlet property="subTaskTextField" destination="CGO-AS-Ob1" id="aWF-E1-2xi"/>
+                        <outlet property="taskTextField" destination="1AT-gp-AC6" id="DMJ-rC-3Gz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CyR-dU-Ym3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
