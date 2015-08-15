@@ -9,11 +9,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let task1 = TaskModel(task : "Study French", subTask: "Verbs", date: "01/01/2014")
-        let task2 = TaskModel(task: "Eat Dinner", subTask: "Burgers", date: "01/01/2014")
+        let date1 = Date.from(year: 2015, month: 08, day: 15)
+        let date2 = Date.from(year: 2015, month: 07, day: 15)
+        let date3 = Date.from(year: 2015, month: 01, day: 01)
+        
+        let task1 = TaskModel(task : "Study French", subTask: "Verbs", date: date1)
+        let task2 = TaskModel(task: "Eat Dinner", subTask: "Burgers", date: date2)
         
 // alterantively create instances directly in array:
-        taskArray = [task1, task2, TaskModel(task: "Gym", subTask: "Leg day", date: "01/01/2014")]
+        taskArray = [task1, task2, TaskModel(task: "Gym", subTask: "Leg day", date: date3)]
         
         self.tableView.reloadData()
     }
@@ -46,7 +50,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         cell.taskLabel.text = thisTask.task
         cell.descriptionLabel.text = thisTask.subTask
-        cell.dateLabel.text = thisTask.date
+        cell.dateLabel.text = Date.toString(date: thisTask.date)
         
         return cell
     }
