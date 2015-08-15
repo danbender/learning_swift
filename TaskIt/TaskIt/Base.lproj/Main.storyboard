@@ -63,12 +63,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Tasks" id="0I1-zJ-BMv">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="1cY-1v-3Rp"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="1cY-1v-3Rp">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="BYZ-38-t0r" id="vk8-cd-ZrR"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="mIw-kV-5t3" id="dlw-G9-B8O"/>
                         <segue destination="cHp-Yi-y7C" kind="show" identifier="showTaskDetail" id="tpW-4m-YjY"/>
-                        <segue destination="wC7-JT-S2w" kind="presentation" id="uKY-6c-RxR"/>
+                        <segue destination="wC7-JT-S2w" kind="presentation" identifier="showTaskAdd" id="uKY-6c-RxR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -107,7 +111,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="37M-Mt-5DO">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="a5B-AI-zGi"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="a5B-AI-zGi">
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="cHp-Yi-y7C" id="BWC-23-XC5"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Done" id="ysu-EB-bOE"/>
                     </navigationItem>
                     <connections>
@@ -177,6 +185,9 @@
                                 <state key="normal" title="Cancel">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="cancelButtonTapped:" destination="wC7-JT-S2w" eventType="touchUpInside" id="FDF-DX-A8a"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
