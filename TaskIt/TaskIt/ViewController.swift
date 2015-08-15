@@ -26,11 +26,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidAppear(animated)
         self.tableView.reloadData()
         
-        func sortByDate (taskOne:TaskModel, taskTwo:TaskModel) -> Bool {
+        taskArray = taskArray.sorted{
+            (taskOne:TaskModel, taskTwo:TaskModel) -> Bool in
+//            comparison logic here
             return taskOne.date.timeIntervalSince1970 > taskTwo.date.timeIntervalSince1970
         }
-        
-        taskArray = taskArray.sorted(sortByDate)
 
     }
 
