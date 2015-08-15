@@ -27,4 +27,8 @@ class TaskDetailViewController: UIViewController {
         
         self.navigationController?.popViewControllerAnimated(true)
     }
+    
+    @IBAction func doneBarButtonItemPressed(sender: UIBarButtonItem) {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
 }
