@@ -32,17 +32,25 @@
                                 <state key="normal" title="Login">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HjQ-kT-08n"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNc-CU-Y6o">
                                 <rect key="frame" x="219" y="179" width="107" height="30"/>
                                 <state key="normal" title="Create Account">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="createAccountButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U4g-Bo-e5X"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="passwordTextField" destination="cKK-xc-fC9" id="XhU-kf-toD"/>
+                        <outlet property="usernameTextField" destination="fU5-G0-pKw" id="XQb-W0-QyD"/>
                         <segue destination="4tM-pZ-Ix5" kind="presentation" identifier="loginToCreateAccountSegue" id="gm9-Ea-aO2"/>
                         <segue destination="A6v-gV-Urw" kind="presentation" identifier="loginToMainSegue" id="0IC-KY-3Ne"/>
                     </connections>
