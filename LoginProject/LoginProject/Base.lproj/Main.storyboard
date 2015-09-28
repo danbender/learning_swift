@@ -85,6 +85,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="passwordLabel" destination="7X4-aQ-cHs" id="BmV-uV-DGp"/>
+                        <outlet property="usernameLabel" destination="mI1-Ff-X5o" id="cMD-v9-i4e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XKE-Vh-7gC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -112,12 +116,18 @@
                                 <state key="normal" title="Create Account">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="createAccountButtonPressed:" destination="4tM-pZ-Ix5" eventType="touchUpInside" id="A5L-MZ-zrG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pws-vY-iKt">
                                 <rect key="frame" x="311" y="249" width="48" height="30"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="4tM-pZ-Ix5" eventType="touchUpInside" id="p3w-zJ-062"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OSK-Yn-tKd">
                                 <rect key="frame" x="77" y="146" width="280" height="30"/>
@@ -132,6 +142,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="choosePasswordTextField" destination="OSK-Yn-tKd" id="KjR-kW-uu7"/>
+                        <outlet property="chooseUsernameTextField" destination="ap5-Xn-8XV" id="Ogk-fQ-mZE"/>
+                        <outlet property="confirmPasswordTextField" destination="L4m-Ja-Ece" id="OZr-jY-ODG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pJW-na-v41" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
