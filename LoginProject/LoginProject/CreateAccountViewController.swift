@@ -25,19 +25,19 @@ class CreateAccountViewController: UIViewController {
     
     @IBAction func createAccountButtonPressed(sender: UIButton) {
         
-        if choosePasswordTextField == confirmPasswordTextField && choosePasswordTextField != nil {
+        if choosePasswordTextField.text == confirmPasswordTextField.text && choosePasswordTextField.text.isEmpty != true {
 
             //            new instance of NSUserDefaults
-            NSUserDefaults.standardUserDefaults().setObject(self.chooseUsernameTextField.text, forKey: kUserNameKey )
+            NSUserDefaults.standardUserDefaults().setObject(self.chooseUsernameTextField.text, forKey: kUserNameKey)
             NSUserDefaults.standardUserDefaults().setObject(self.choosePasswordTextField.text, forKey: kPasswordKey)
             
 //            Save
             NSUserDefaults.standardUserDefaults().synchronize()
             
-            self.dismissViewControllerAnimated(true, completion: nil)
-            
             delegate?.accountCreated()
+            self.dismissViewControllerAnimated(true, completion: nil)
         }
+
     }
     
     @IBAction func cancelButtonPressed(sender: UIButton) {
