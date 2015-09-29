@@ -31,7 +31,7 @@ class LoginViewController: UIViewController, CreateAccountViewControllerDelegate
         let passwordSavedFromNSUserDefaults = NSUserDefaults.standardUserDefaults().objectForKey(kPasswordKey) as? String
         println(passwordSavedFromNSUserDefaults)
         
-        if usernameTextField.text == usernameSavedFromNSUserDefaults && passwordTextField == passwordSavedFromNSUserDefaults {
+        if usernameTextField.text == usernameSavedFromNSUserDefaults && passwordTextField.text == passwordSavedFromNSUserDefaults {
             self.performSegueWithIdentifier("loginToMainSegue", sender: self)
         }
     }
