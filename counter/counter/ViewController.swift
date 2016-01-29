@@ -16,6 +16,14 @@ class ViewController: UIViewController {
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
         swipeLeft.direction = .Left
         self.view.addGestureRecognizer(swipeLeft)
+        
+    
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "tapped:")
+        self.view.addGestureRecognizer(tapGestureRecognizer)
+        
+        let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: "longPressed:")
+        self.view.addGestureRecognizer(longPressRecognizer)
+
 
     }
 
@@ -25,8 +33,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func addButtonPressed(sender: UIButton) {
-        newCountValueWhenPressed += 1
-        currentCountLabel.text = "\(newCountValueWhenPressed)"
+        
     }
     
     @IBAction func resetButtonPressed(sender: UIButton) {
@@ -59,6 +66,21 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    
+
+    func tapped(sender: UITapGestureRecognizer)
+    {
+        newCountValueWhenPressed += 1
+        currentCountLabel.text = "\(newCountValueWhenPressed)"
+        print("tapped")
+    }
+    
+    func longPressed(sender: UILongPressGestureRecognizer)
+    {
+        print("longpressed")
+    }
+    
 
 }
 
