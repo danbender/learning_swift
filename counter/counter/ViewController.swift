@@ -69,15 +69,17 @@ class ViewController: UIViewController {
     
     
 
-    func tapped(sender: UITapGestureRecognizer)
-    {
+    func tapped(sender: UITapGestureRecognizer) {
         newCountValueWhenPressed += 1
         currentCountLabel.text = "\(newCountValueWhenPressed)"
         print("tapped")
     }
     
-    func longPressed(sender: UILongPressGestureRecognizer)
-    {
+    func longPressed(sender: UILongPressGestureRecognizer) {
+        switch {
+            
+        }
+        
         print("longpressed")
     }
     
