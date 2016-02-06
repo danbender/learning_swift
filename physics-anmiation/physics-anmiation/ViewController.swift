@@ -1,25 +1,39 @@
-//
-//  ViewController.swift
-//  physics-anmiation
-//
-//  Created by Dan Bender on 31/01/16.
-//  Copyright © 2016 Dan Bender. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var helloLabel: UILabel!
+    
+    var welcomeLabel: UILabel!
+    var nameLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        addLabels()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func buttonPressed(sender: AnyObject) {
+        
+        helloLabel.text = "coffee time"
     }
-
-
+    
+    func addLabels() {
+        welcomeLabel = UILabel() // initialize
+        welcomeLabel.text = "Welcome!"
+        welcomeLabel.font = UIFont.systemFontOfSize(36)
+        welcomeLabel.sizeToFit()
+        
+        welcomeLabel.center = CGPoint(x:100, y:240)
+        view.addSubview(welcomeLabel)
+        
+        nameLabel = UILabel()
+        nameLabel.text = "Dan B."
+        nameLabel.font = UIFont.systemFontOfSize(48)
+        nameLabel.sizeToFit()
+        
+        nameLabel.center = CGPoint(x: 200, y: 290)
+        view.addSubview(nameLabel)
+    }
 }
 
