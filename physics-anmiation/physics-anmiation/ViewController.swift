@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     @IBAction func buttonPressed(sender: AnyObject) {
         
         helloLabel.text = "coffee time"
+        
+        animateLabels()
     }
     
     func addLabels() {
@@ -34,6 +36,28 @@ class ViewController: UIViewController {
         
         nameLabel.center = CGPoint(x: 200, y: 290)
         view.addSubview(nameLabel)
+    }
+    
+    func animateLabels() {
+        welcomeLabel.center = CGPoint(x: 100, y: 40)
+        welcomeLabel.alpha = 0
+        
+        UIView.animateWithDuration(0.5, animations: { () -> Void in
+           
+            self.welcomeLabel.center = CGPoint(x: 100, y: 240)
+            self.welcomeLabel.alpha = 1
+            
+        }, completion: nil)
+        
+        nameLabel.center = CGPoint(x: 200, y: 90)
+        nameLabel.alpha = 0
+        
+        UIView.animateWithDuration(0.5, animations: { () -> Void in
+          
+            self.nameLabel.center = CGPoint(x: 200, y: 290)
+            self.nameLabel.alpha = 1
+        
+        }, completion: nil)
     }
 }
 
