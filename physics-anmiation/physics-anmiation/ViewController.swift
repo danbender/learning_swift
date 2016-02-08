@@ -6,6 +6,7 @@ class ViewController: UIViewController {
     
     var welcomeLabel: UILabel!
     var nameLabel: UILabel!
+    @IBOutlet weak var nameTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -14,8 +15,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func buttonPressed(sender: AnyObject) {
-        
         helloLabel.text = "Physics!"
+        
+        updateNameLabel()
         
 //        animateLabels()
         animateLabelsWithPhysics()
@@ -40,7 +42,7 @@ class ViewController: UIViewController {
         nameLabel.center = CGPoint(x: 200, y: 290)
         view.addSubview(nameLabel)
     }
-    
+
     func animateLabels() {
         welcomeLabel.center = CGPoint(x: 100, y: 40)
         
@@ -74,6 +76,11 @@ class ViewController: UIViewController {
             self.nameLabel.alpha = 1
         }, completion: nil)
         
+    }
+    
+    func updateNameLabel() {
+        nameLabel.text = nameTextField.text
+        nameLabel.sizeToFit()
     }
     
 
