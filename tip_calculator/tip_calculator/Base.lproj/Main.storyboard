@@ -18,18 +18,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="g73-iC-E9U">
-                                <rect key="frame" x="125" y="507" width="350" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="g73-iC-E9U">
+                                <rect key="frame" x="125" y="487" width="350" height="51"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Dhb-vD-NbW"/>
+                                    <constraint firstAttribute="height" constant="50" id="Dhb-vD-NbW"/>
                                     <constraint firstAttribute="width" constant="346" id="tzx-rR-jIn"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="tipPercentageSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="WMq-vp-ctK"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Tip (0%):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zeb-a2-HpY">
-                                <rect key="frame" x="123" y="208" width="68" height="21"/>
+                                <rect key="frame" x="123" y="208" width="104" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="CBr-QL-XOI"/>
-                                    <constraint firstAttribute="width" constant="68" id="Ewg-1U-Jf4"/>
+                                    <constraint firstAttribute="width" constant="104" id="Ewg-1U-Jf4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -88,6 +91,13 @@
                             <constraint firstItem="g73-iC-E9U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="trv-b4-yG8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tipPercentage" destination="Zeb-a2-HpY" id="vdL-EN-hr0"/>
+                        <outlet property="tipPercentageSlider" destination="g73-iC-E9U" id="pO8-lU-6ES"/>
+                        <outlet property="tipValue" destination="HN3-j0-h9n" id="h1y-QL-xRU"/>
+                        <outlet property="totalAmount" destination="UOy-uh-Hg4" id="Sk0-bu-gNO"/>
+                        <outlet property="userValueInputTextField" destination="ads-IE-g1T" id="lEW-VL-gTe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
