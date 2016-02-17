@@ -23,14 +23,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tipPercentageSlider: UISlider!
     
-    var chosenTipValue : Int = 0
-    var currentSubtotal : String = ""
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        getCurrentSubtotal()
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,16 +34,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tipPercentageSliderAction(sender: UISlider) {
-        chosenTipValue = Int(sender.value)
+        var chosentipValue = Int(sender.value)
+        tipPercentage.text = "Tip (\(chosentipValue)%):"
         
-        tipPercentage.text = "Tip (\(tipValue)%):"
-        tipPercentage.sizeToFit()
-    }
-    
-    func getCurrentSubtotal () {
-        currentSubtotal = userValueInputTextField.text!
-        print(currentSubtotal)
-        resignFirstResponder()
     }
 
 
