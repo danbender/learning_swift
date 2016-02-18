@@ -29,11 +29,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-//        let textField = userValueInputTextField
-//        textField.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
-//        currencyFormatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
-//        currencyFormatter.currencyCode = NSLocale.currentLocale().displayNameForKey(NSLocaleCurrencySymbol, value: NSLocaleCurrencyCode)
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,29 +61,6 @@ class ViewController: UIViewController {
     }
     
     func calculateTotalAmount () {
-        
         totalAmount.text = "$ \(Double(tipAmount) + Double(userSubtotalInput))"
-        
     }
-    
-    
-    
-//    func textFieldDidChange(textField: UITextField) {
-//        var text = textField.text!.stringByReplacingOccurrencesOfString(currencyFormatter.currencySymbol, withString: "").stringByReplacingOccurrencesOfString(currencyFormatter.groupingSeparator, withString: "").stringByReplacingOccurrencesOfString(currencyFormatter.decimalSeparator, withString: "")
-//        textField.text = currencyFormatter.stringFromNumber((text as NSString).doubleValue / 100.0)
-//    }
-//    
-//    
-//    func currencyStringAsDouble(currencyString: String) -> Double {
-//        let cleanedString = currencyString.stringByReplacingOccurrencesOfString(currencyFormatter.currencySymbol, withString: "").stringByReplacingOccurrencesOfString(currencyFormatter.groupingSeparator, withString: "").stringByReplacingOccurrencesOfString(currencyFormatter.decimalSeparator, withString: "")
-//        let currencyDouble = (text as NSString).doubleValue / 100.0
-//        return currencyDouble;
-//    }
-
-
 }
-
-
-// get
-//  subtotal + tipamount = total
-//         subtotal * tipercentage = tip amount
