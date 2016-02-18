@@ -51,6 +51,7 @@ class ViewController: UIViewController {
     
     @IBAction func TipMeButtonTapped(sender: AnyObject) {
         userSubtotalInput = Int(userValueInputTextField.text!)!
+        print(userSubtotalInput)
     }
     
 
@@ -65,7 +66,9 @@ class ViewController: UIViewController {
     }
     
     func calculateTotalAmount () {
+        
         totalAmount.text = "$ \(Double(tipAmount) + Double(userSubtotalInput))"
+        
     }
     
     
