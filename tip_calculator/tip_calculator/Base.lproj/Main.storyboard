@@ -18,11 +18,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="g73-iC-E9U">
-                                <rect key="frame" x="125" y="487" width="350" height="51"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="$0.00" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ads-IE-g1T">
+                                <rect key="frame" x="105" y="56" width="144" height="73"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Dhb-vD-NbW"/>
-                                    <constraint firstAttribute="width" constant="346" id="tzx-rR-jIn"/>
+                                    <constraint firstAttribute="width" constant="209" id="fwz-ji-wOb"/>
+                                    <constraint firstAttribute="height" constant="73" id="n1Q-bC-bcZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="50"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="UserEntersValueInTextField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="wQG-gi-9ki"/>
+                                </connections>
+                            </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="g73-iC-E9U">
+                                <rect key="frame" x="116" y="285" width="350" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="346" id="WqE-92-8G2"/>
+                                    <constraint firstAttribute="height" constant="50" id="pZS-kp-jkS"/>
                                 </constraints>
                                 <connections>
                                     <action selector="tipPercentageSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="WMq-vp-ctK"/>
@@ -68,16 +81,13 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="$0.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ads-IE-g1T">
-                                <rect key="frame" x="105" y="56" width="209" height="73"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="209" id="fwz-ji-wOb"/>
-                                    <constraint firstAttribute="height" constant="73" id="n1Q-bC-bcZ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="50"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go"/>
-                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1GF-cH-BwF">
+                                <rect key="frame" x="269" y="78" width="47" height="30"/>
+                                <state key="normal" title="Tip me"/>
+                                <connections>
+                                    <action selector="TipMeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dtW-ID-ho5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -87,7 +97,6 @@
                             <constraint firstItem="Zeb-a2-HpY" firstAttribute="top" secondItem="ads-IE-g1T" secondAttribute="bottom" constant="79" id="Y4I-dl-ftx"/>
                             <constraint firstItem="HN3-j0-h9n" firstAttribute="top" secondItem="ads-IE-g1T" secondAttribute="bottom" constant="79" id="dpE-oC-HTY"/>
                             <constraint firstItem="UOy-uh-Hg4" firstAttribute="top" secondItem="HN3-j0-h9n" secondAttribute="bottom" constant="14" id="e4c-8S-24m"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="g73-iC-E9U" secondAttribute="bottom" constant="63" id="fXh-Ke-ISs"/>
                             <constraint firstItem="g73-iC-E9U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="trv-b4-yG8"/>
                         </constraints>
                     </view>
