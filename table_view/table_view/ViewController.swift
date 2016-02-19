@@ -4,13 +4,14 @@ class ViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     
-    let CellIdentifier = "net.danbender.DemoPrototypeCell"
-    
     let data = ["New York, NY", "Los Angeles, CA", "Chicago, IL", "Houston, TX",
         "Philadelphia, PA", "Phoenix, AZ", "San Diego, CA", "San Antonio, TX",
         "Dallas, TX", "Detroit, MI", "San Jose, CA", "Indianapolis, IN",
         "Jacksonville, FL", "San Francisco, CA", "Columbus, OH", "Austin, TX",
         "Memphis, TN", "Baltimore, MD", "Charlotte, ND", "Fort Worth, TX"]
+    
+    let CellIdentifier = "net.danbender.DemoPrototypeCell"
+    let accessoryTypes: [UITableViewCellAccessoryType] = [.None, .DisclosureIndicator, .DetailDisclosureButton, .Checkmark, .DetailButton]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         cell.label.text = cityState.first
         cell.stateLabel.text = cityState.last
+        cell.accessoryType = accessoryTypes[1]
         
         return cell
     }

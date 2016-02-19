@@ -38,7 +38,6 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="LA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKf-eC-KgE">
                                                     <rect key="frame" x="500" y="32" width="52" height="29"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="29" id="PuE-DY-4ri"/>
                                                         <constraint firstAttribute="width" constant="52" id="kkH-t7-9aF"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="24"/>
@@ -53,10 +52,6 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="EKf-eC-KgE" secondAttribute="trailing" constant="40" id="ic3-Sz-NoQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <constraints>
-                                            <constraint firstItem="kBl-th-DTZ" firstAttribute="centerY" secondItem="skX-ok-Exf" secondAttribute="centerY" id="I3P-ca-18P"/>
-                                            <constraint firstItem="EKf-eC-KgE" firstAttribute="centerY" secondItem="skX-ok-Exf" secondAttribute="centerY" id="i2a-go-UFi"/>
-                                        </constraints>
                                         <connections>
                                             <outlet property="label" destination="kBl-th-DTZ" id="B3Y-5I-ll9"/>
                                             <outlet property="stateLabel" destination="EKf-eC-KgE" id="HC2-0t-1Xg"/>
