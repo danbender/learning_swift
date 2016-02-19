@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipPercentageSlider: UISlider!
     
     var chosentipValue : Int = 0
-    var userSubtotalInput : Int = 0
+    var userSubtotalInput : Double = 0.0
     var tipAmount : Double = 0.0
     var totalCalcAmount : Double = 0.0
     
@@ -44,15 +44,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func TipMeButtonTapped(sender: AnyObject) {
-        userSubtotalInput = Int(userValueInputTextField.text!)!
-        print(userSubtotalInput)
+        formatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
+        userSubtotalInput = NSString(string: userValueInputTextField.text!).doubleValue
+        userValueInputTextField.text = formatter.stringFromNumber(userSubtotalInput)
     }
-    
-
     
     
 //    MARK - helper functions
-    
     
     func calculateTipAmount () {
         tipAmount = (Double(userSubtotalInput)/100) * Double(chosentipValue)
@@ -60,17 +58,13 @@ class ViewController: UIViewController {
         formatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
         let tipAmountString = formatter.stringFromNumber(tipAmount)!
         tipValue.text = "\(tipAmountString)"
-
     }
     
     func calculateTotalAmount () {
         totalCalcAmount = Double(tipAmount) + Double(userSubtotalInput)
         
-        
         formatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
         let totalAmountString = formatter.stringFromNumber(totalCalcAmount)!
         totalAmount.text = "\(totalAmountString)"
     }
-   
-    
 }
