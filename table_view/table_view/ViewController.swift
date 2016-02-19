@@ -12,6 +12,8 @@ class ViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     
+    let CellIdentifier = "net.danbender.MyFirstTableViewCell"
+    
     let data = ["New York, NY", "Los Angeles, CA", "Chicago, IL", "Houston, TX",
         "Philadelphia, PA", "Phoenix, AZ", "San Diego, CA", "San Antonio, TX",
         "Dallas, TX", "Detroit, MI", "San Jose, CA", "Indianapolis, IN",
@@ -21,13 +23,14 @@ class ViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
         tableView.dataSource = self
-
+        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: CellIdentifier)
     }
 
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .Default, reuseIdentifier: nil)
+        let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier, forIndexPath: indexPath) as UITableViewCell
         cell.textLabel?.text = data[indexPath.row]
         return cell
     }
