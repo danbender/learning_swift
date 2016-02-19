@@ -1,18 +1,10 @@
-//
-//  ViewController.swift
-//  table_view
-//
-//  Created by Dan Bender on 19/02/16.
-//  Copyright © 2016 Dan Bender. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     
-    let CellIdentifier = "net.danbender.MyFirstTableViewCell"
+    let CellIdentifier = "net.danbender.DemoPrototypeCell"
     
     let data = ["New York, NY", "Los Angeles, CA", "Chicago, IL", "Houston, TX",
         "Philadelphia, PA", "Phoenix, AZ", "San Diego, CA", "San Antonio, TX",
@@ -25,13 +17,17 @@ class ViewController: UIViewController, UITableViewDataSource {
         // Do any additional setup after loading the view, typically from a nib.
         
         tableView.dataSource = self
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: CellIdentifier)
     }
 
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier, forIndexPath: indexPath) as UITableViewCell
-        cell.textLabel?.text = data[indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier, forIndexPath: indexPath) as! MyTableViewCell
+        
+        let cityState = data[indexPath.row].componentsSeparatedByString(", ")
+        
+        cell.label.text = cityState.first
+        cell.stateLabel.text = cityState.last
+        
         return cell
     }
     
@@ -39,4 +35,3 @@ class ViewController: UIViewController, UITableViewDataSource {
         return data.count
     }
 }
-

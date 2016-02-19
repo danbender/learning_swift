@@ -1,15 +1,10 @@
-//
-//  MyTableViewCell.swift
-//  table_view
-//
-//  Created by Dan Bender on 19/02/16.
-//  Copyright © 2016 Dan Bender. All rights reserved.
-//
-
 import UIKit
 
 class MyTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var stateLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -12,6 +12,7 @@
 		3797D2B31C773A8C00DE1F8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3797D2B11C773A8C00DE1F8C /* Main.storyboard */; };
 		3797D2B51C773A8C00DE1F8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3797D2B41C773A8C00DE1F8C /* Assets.xcassets */; };
 		3797D2B81C773A8C00DE1F8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3797D2B61C773A8C00DE1F8C /* LaunchScreen.storyboard */; };
+		3797D2C01C77659800DE1F8C /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3797D2BF1C77659800DE1F8C /* MyTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		3797D2B41C773A8C00DE1F8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3797D2B71C773A8C00DE1F8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3797D2B91C773A8C00DE1F8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3797D2BF1C77659800DE1F8C /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				3797D2AD1C773A8C00DE1F8C /* AppDelegate.swift */,
 				3797D2AF1C773A8C00DE1F8C /* ViewController.swift */,
+				3797D2BF1C77659800DE1F8C /* MyTableViewCell.swift */,
 				3797D2B11C773A8C00DE1F8C /* Main.storyboard */,
 				3797D2B41C773A8C00DE1F8C /* Assets.xcassets */,
 				3797D2B61C773A8C00DE1F8C /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			files = (
 				3797D2B01C773A8C00DE1F8C /* ViewController.swift in Sources */,
 				3797D2AE1C773A8C00DE1F8C /* AppDelegate.swift in Sources */,
+				3797D2C01C77659800DE1F8C /* MyTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
