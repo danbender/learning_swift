@@ -11,24 +11,23 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var userValueInputTextField: UITextField!
-    
     @IBOutlet weak var tipPercentage: UILabel!
     @IBOutlet weak var tipValue: UILabel!
-    
     @IBOutlet weak var totalAmount: UILabel!
-    
     @IBOutlet weak var tipPercentageSlider: UISlider!
     
     var chosentipValue : Int = 0
     var userSubtotalInput : Int = 0
     var tipAmount : Double = 0.0
-    let currencyFormatter = NSNumberFormatter()
+    var totalCalcAmount : Double = 0.0
+    
+    let formatter = NSNumberFormatter()
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,10 +56,21 @@ class ViewController: UIViewController {
     
     func calculateTipAmount () {
         tipAmount = (Double(userSubtotalInput)/100) * Double(chosentipValue)
-        tipValue.text = "\(tipAmount)"
+        
+        formatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
+        let tipAmountString = formatter.stringFromNumber(tipAmount)!
+        tipValue.text = "\(tipAmountString)"
+
     }
     
     func calculateTotalAmount () {
-        totalAmount.text = "$ \(Double(tipAmount) + Double(userSubtotalInput))"
+        totalCalcAmount = Double(tipAmount) + Double(userSubtotalInput)
+        
+        
+        formatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
+        let totalAmountString = formatter.stringFromNumber(totalCalcAmount)!
+        totalAmount.text = "\(totalAmountString)"
     }
+   
+    
 }
