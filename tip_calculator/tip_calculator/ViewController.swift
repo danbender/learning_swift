@@ -27,7 +27,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,8 +44,10 @@ class ViewController: UIViewController {
     
     @IBAction func TipMeButtonTapped(sender: AnyObject) {
         formatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
+
         userSubtotalInput = NSString(string: userValueInputTextField.text!).doubleValue
         userValueInputTextField.text = formatter.stringFromNumber(userSubtotalInput)
+        
     }
     
     
@@ -67,4 +68,6 @@ class ViewController: UIViewController {
         let totalAmountString = formatter.stringFromNumber(totalCalcAmount)!
         totalAmount.text = "\(totalAmountString)"
     }
+    
+
 }
