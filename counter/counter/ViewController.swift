@@ -75,13 +75,13 @@ class ViewController: UIViewController {
         print("tapped")
     }
     
-    func longPressed(sender: UILongPressGestureRecognizer) {
-        switch {
-            
-        }
-        
-        print("longpressed")
-    }
+//    func longPressed(sender: UILongPressGestureRecognizer) {
+//        switch {
+//            
+//        }
+//        
+//        print("longpressed")
+//    }
     
 
 }
